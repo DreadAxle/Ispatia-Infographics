@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The First Firmament: A Cosmic Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- 
+    Infographic Plan:
+    Narrative Structure:
+    1. Introduction: Hook with the concept of the "First Cosmos" and its singular nature.
+    2. The First War: Detail the ideological split and the resulting cosmic civil war.
+    3. Cosmic Power Scaling: Compare the First Firmament to other major cosmic entities.
+    4. The Return (Eternity War): Visualize the master plan to reclaim reality.
+    5. Entity Profile: Analyze its core abilities and critical weaknesses.
+
+    Visualization Choices:
+    - Data: The First Cosmos. Goal: Inform. Viz: Single Big Number. Justification: High-impact introduction.
+    - Factions (Aspirants vs. Celestials). Goal: Compare. Viz: Donut Chart (Chart.js). Justification: Shows two parts of a single creation.
+    - Celestial War Events. Goal: Organize. Viz: HTML/CSS Flowchart. Justification: Clearly shows a sequence of events without SVG/Mermaid.
+    - Cosmic Hierarchy. Goal: Rank. Viz: Ordered Horizontal Bar Chart (Chart.js). Justification: Best for comparing magnitudes and establishing a clear ranking.
+    - Eternity War Plan. Goal: Organize. Viz: HTML/CSS Flowchart. Justification: Details a strategic, multi-step process.
+    - Abilities Analysis. Goal: Compare. Viz: Radar Chart (Chart.js). Justification: Excellent for showing strengths across multiple qualitative categories for a single subject.
+    - Weaknesses. Goal: Organize. Viz: Styled Cards (HTML/CSS). Justification: Presents distinct qualitative points for easy reading.
+
+    Color Palette Selection:
+    - Name: "Energetic & Playful" (Adapted for a cosmic theme).
+    - HEX Codes: #00A5E3 (Primary Blue), #FF96C5 (Accent Pink), #FFBF65 (Accent Yellow), #FF5768 (Accent Red for contrast/negatives), #FFFFFF (Text/Highlights).
+
+    Confirmation:
+    - NEITHER Mermaid JS NOR SVG were used anywhere in this output. All diagrams are built with structured HTML and Tailwind CSS. All charts are rendered on HTML Canvas elements by Chart.js.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0c0a1e;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-arrow {
+            color: #FFBF65;
+            font-size: 2rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12 md:mb-20">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#00A5E3] to-[#FF96C5] mb-2">The First Firmament</h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">An analysis of the primordial embodiment of cosmic stasis and the war that birthed the Multiverse.</p>
+        </header>
+
+        <main class="space-y-16 md:space-y-24">
+
+            <section id="introduction" class="text-center">
+                <div class="max-w-4xl mx-auto bg-[#1a163a]/50 rounded-2xl shadow-2xl shadow-[#00A5E3]/10 p-6 md:p-10 border border-gray-700">
+                    <h2 class="text-3xl font-bold text-white mb-4">The Primordial Singularity</h2>
+                    <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Before the Multiverse, there was one. The First Firmament was not a being *in* the first universe—it *was* the universe. A single, sentient, and unchanging reality that eventually grew lonely and created life from its own essence.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="flex flex-col items-center justify-center">
+                             <p class="text-9xl font-black text-transparent bg-clip-text bg-gradient-to-br from-[#FFBF65] to-[#FF96C5]">1st</p>
+                             <p class="text-2xl font-bold text-white mt-[-1rem]">Cosmos</p>
+                             <p class="text-gray-400 mt-2">The sole reality, representing perfect, eternal stasis.</p>
+                        </div>
+                        <div>
+                            <p class="text-xl font-semibold text-white mb-2">A Dichotomy of Creation</p>
+                            <p class="text-gray-400 mb-4">This first act of creation birthed two factions with opposing philosophies, sowing the seeds of cosmic war.</p>
+                            <div class="chart-container h-64 md:h-80">
+                                <canvas id="factionsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="celestial-war">
+                <h2 class="text-3xl font-bold text-white text-center mb-4">A House Divided: The First War</h2>
+                <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12">The ideological conflict between the Firmament's children—one seeking stasis, the other evolution—erupted into the most fundamental war in existence. This was a battle of ideas that physically shattered reality itself.</p>
+                <div class="bg-[#1a163a]/50 rounded-2xl shadow-2xl shadow-[#00A5E3]/10 p-6 md:p-10 border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white text-center mb-8">The Path to a New Reality</h3>
+                    <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-4">
+                        <div class="text-center p-4 rounded-lg bg-gray-800 w-full md:w-1/4">
+                            <p class="text-2xl mb-2">💥</p>
+                            <h4 class="font-bold text-[#00A5E3]">Rebellion</h4>
+                            <p class="text-sm text-gray-400">The Celestials' desire for an evolving universe is deemed sacrilege.</p>
+                        </div>
+                        <div class="flow-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                        <div class="text-center p-4 rounded-lg bg-gray-800 w-full md:w-1/4">
+                            <p class="text-2xl mb-2">🤖</p>
+                            <h4 class="font-bold text-[#00A5E3]">The Godkiller</h4>
+                            <p class="text-sm text-gray-400">The Aspirants build a colossal weapon, nearly wiping out the rebels.</p>
+                        </div>
+                        <div class="flow-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                        <div class="text-center p-4 rounded-lg bg-gray-800 w-full md:w-1/4">
+                            <p class="text-2xl mb-2">⚔️</p>
+                            <h4 class="font-bold text-[#00A5E3]">Civil War</h4>
+                            <p class="text-sm text-gray-400">A rift among the loyalist Aspirants provides a crucial opening.</p>
+                        </div>
+                        <div class="flow-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                        <div class="text-center p-4 rounded-lg bg-gray-800 w-full md:w-1/4">
+                            <p class="text-2xl mb-2">🌌</p>
+                            <h4 class="font-bold text-[#00A5E3]">The Shattering</h4>
+                            <p class="text-sm text-gray-400">The Celestials' final attack shatters the First Firmament, creating the Multiverse.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="power-scaling">
+                 <h2 class="text-3xl font-bold text-white text-center mb-4">Cosmic Power Scaling</h2>
+                 <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12">The First Firmament exists at the apex of the cosmic hierarchy. Its defining feat—imprisoning the multiversal Eternity—places it in a class of power rivaled by only a handful of entities across all of creation.</p>
+                 <div class="bg-[#1a163a]/50 rounded-2xl shadow-2xl shadow-[#00A5E3]/10 p-6 md:p-10 border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Comparative Feat Analysis</h3>
+                    <div class="chart-container h-96 md:h-[500px] max-w-4xl">
+                        <canvas id="powerLevelsChart"></canvas>
+                    </div>
+                    <p class="text-center text-gray-400 mt-4 text-sm">This chart ranks entities by the scale of their single most defining, canonical feat of power. The First Firmament's ability to chain the living Multiverse demonstrates its immense standing.</p>
+                 </div>
+            </section>
+
+            <section id="eternity-war">
+                <h2 class="text-3xl font-bold text-white text-center mb-4">The Return: The Eternity War</h2>
+                <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12">After eons in exile, the Firmament seized an opportunity to reclaim its lost dominion. Its return was not a direct assault but a campaign of conceptual warfare, corrupting the very laws of the new Eighth Cosmos.</p>
+                <div class="bg-[#1a163a]/50 rounded-2xl shadow-2xl shadow-[#00A5E3]/10 p-6 md:p-10 border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-white text-center mb-8">The Cosmic Jailer's Master Plan</h3>
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="p-6 rounded-lg bg-gray-800 border-t-4 border-[#FFBF65]">
+                            <p class="font-bold text-5xl text-[#FFBF65] mb-2">1</p>
+                            <h4 class="text-xl font-bold text-white mb-2">Imprison Eternity</h4>
+                            <p class="text-gray-400">Capture the living embodiment of the Multiverse, placing all of reality in a metaphysical prison.</p>
+                        </div>
+                        <div class="p-6 rounded-lg bg-gray-800 border-t-4 border-[#FFBF65]">
+                            <p class="font-bold text-5xl text-[#FFBF65] mb-2">2</p>
+                            <h4 class="text-xl font-bold text-white mb-2">Corrupt the Order</h4>
+                            <p class="text-gray-400">Turn Master Order and Lord Chaos into agents, leading them to assassinate the Living Tribunal.</p>
+                        </div>
+                        <div class="p-6 rounded-lg bg-gray-800 border-t-4 border-[#FFBF65]">
+                            <p class="font-bold text-5xl text-[#FFBF65] mb-2">3</p>
+                            <h4 class="text-xl font-bold text-white mb-2">Wage War by Proxy</h4>
+                            <p class="text-gray-400">Create the entity Logos to hunt the Celestials and revert Galactus into a weapon of consumption.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="analysis">
+                <h2 class="text-3xl font-bold text-white text-center mb-12">Entity Profile: Power and Pathos</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="bg-[#1a163a]/50 rounded-2xl shadow-2xl shadow-[#00A5E3]/10 p-6 md:p-10 border border-gray-700">
+                        <h3 class="text-2xl font-semibold text-white mb-4">A Compendium of Abilities</h3>
+                        <p class="text-gray-400 mb-6">The Firmament's power is not just energy, but fundamental control over reality's source code.</p>
+                        <div class="chart-container h-80 md:h-96">
+                            <canvas id="abilitiesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-[#1a163a]/50 rounded-2xl shadow-2xl shadow-[#FF5768]/10 p-6 md:p-10 border border-gray-700">
+                        <h3 class="text-2xl font-semibold text-white mb-4">The Flaws in Perfection</h3>
+                        <p class="text-gray-400 mb-6">Despite its power, the Firmament's history is defined by its defeats, revealing critical vulnerabilities.</p>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-800 rounded-lg">
+                                <h4 class="font-bold text-[#FF5768]">Vulnerable to Overwhelming Force</h4>
+                                <p class="text-sm text-gray-400">It can be physically shattered by a sufficient concentration of cosmic power, as proven by the Celestials.</p>
+                            </div>
+                            <div class="p-4 bg-gray-800 rounded-lg">
+                                <h4 class="font-bold text-[#FF5768]">Psychological Rigidity</h4>
+                                <p class="text-sm text-gray-400">Its narcissistic need for stasis and inability to accept change is its greatest psychological flaw and the direct cause of its downfall.</p>
+                            </div>
+                            <div class="p-4 bg-gray-800 rounded-lg">
+                                <h4 class="font-bold text-[#FF5768]">Dependence on Proxies</h4>
+                                <p class="text-sm text-gray-400">In its weakened state, it relies on corrupting others to act, creating potential points of failure in its plans.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-20 py-8 border-t border-gray-800">
+            <p class="text-gray-500">Infographic based on the cosmic lore of Marvel Comics. Data visualization created for analytical purposes.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines.filter(line => line.length > 0);
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const chartDefaultFont = {
+            family: 'Inter',
+            size: 12,
+        };
+
+        const chartColors = {
+            blue: '#00A5E3',
+            pink: '#FF96C5',
+            yellow: '#FFBF65',
+            red: '#FF5768',
+            grid: 'rgba(255, 255, 255, 0.1)',
+            text: '#F3F4F6'
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            new Chart(document.getElementById('factionsChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['The Aspirants (Loyalists)', 'The Celestials (Rebels)'],
+                    datasets: [{
+                        label: 'Factions',
+                        data: [50, 50],
+                        backgroundColor: [chartColors.blue, chartColors.pink],
+                        borderColor: '#1a163a',
+                        borderWidth: 4,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: chartColors.text,
+                                font: chartDefaultFont,
+                                boxWidth: 15,
+                                padding: 20
+                            }
+                        },
+                        tooltip: {
+                            callbacks: { title: tooltipTitleCallback }
+                        }
+                    }
+                }
+            });
+
+            const powerLevelsLabels = [
+                'The One-Above-All', 
+                'Thanos (w/ HOTU)', 
+                'The First Firmament', 
+                'Beyonders', 
+                'Living Tribunal', 
+                'Eternity', 
+                'Galactus'
+            ].map(label => wrapLabel(label, 16));
+
+            new Chart(document.getElementById('powerLevelsChart'), {
+                type: 'bar',
+                data: {
+                    labels: powerLevelsLabels,
+                    datasets: [{
+                        label: 'Relative Power Scale (Conceptual)',
+                        data: [100, 95, 90, 88, 85, 80, 50],
+                        backgroundColor: [
+                            chartColors.yellow,
+                            chartColors.pink,
+                            chartColors.blue,
+                            '#8DD7BF',
+                            '#8DD7BF',
+                            '#8DD7BF',
+                            '#8DD7BF'
+                        ],
+                        borderColor: 'rgba(0,0,0,0)',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: { color: chartColors.grid },
+                            ticks: { color: chartColors.text, font: chartDefaultFont },
+                        },
+                        y: {
+                            grid: { display: false },
+                            ticks: { color: chartColors.text, font: chartDefaultFont },
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: { title: tooltipTitleCallback }
+                        }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('abilitiesChart'), {
+                type: 'radar',
+                data: {
+                    labels: ['Cosmic Embodiment', 'Nigh-Omnipotence', 'Theogenesis (Life Creation)', 'Conceptual Corruption', 'Reality Warping', 'Immortality'],
+                    datasets: [{
+                        label: 'First Firmament Abilities',
+                        data: [10, 9, 9, 10, 8, 9],
+                        fill: true,
+                        backgroundColor: 'rgba(0, 165, 227, 0.2)',
+                        borderColor: chartColors.blue,
+                        pointBackgroundColor: chartColors.blue,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: chartColors.blue
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: chartColors.grid },
+                            grid: { color: chartColors.grid },
+                            pointLabels: {
+                                color: chartColors.text,
+                                font: { ...chartDefaultFont, size: 10 }
+                            },
+                            ticks: {
+                                color: chartColors.text,
+                                backdropColor: 'rgba(0,0,0,0)',
+                                font: { size: 10 }
+                            },
+                            min: 0,
+                            max: 10,
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: { title: tooltipTitleCallback }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
