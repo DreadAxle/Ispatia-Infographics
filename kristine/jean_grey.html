@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean Grey: An Infographic Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4361EE;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: #F72585;
+            border: 4px solid #4CC9F0;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-left {
+            left: 0;
+        }
+        .timeline-right {
+            left: 50%;
+        }
+        .timeline-right::after {
+            left: -12px;
+        }
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #1F2937;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-container::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+            .timeline-left::after, .timeline-right::after {
+                left: 18px;
+            }
+            .timeline-right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#F72585] via-[#7209B7] to-[#4361EE]">Jean Grey</h1>
+            <p class="text-xl md:text-2xl text-gray-400 mt-2">A Study in Humanity and Cosmic Fire</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <div class="lg:col-span-2 bg-gray-800 rounded-lg shadow-2xl p-6">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#4CC9F0]">The Core Duality</h2>
+                <p class="text-center max-w-3xl mx-auto text-gray-400 mb-8">Jean Grey's existence is defined by the conflict between her innate, limitless mutant potential and her profound bond with the Phoenix Force, a primal entity of life and rebirth. This duality is the engine of her entire narrative arc.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="flex flex-col items-center justify-center p-6">
+                         <div class="text-center">
+                            <p class="text-2xl font-semibold text-gray-400">Mutant Classification</p>
+                            <p class="text-6xl font-black text-[#F72585]">OMEGA</p>
+                            <p class="text-2xl font-bold text-gray-300">TELEPATH</p>
+                        </div>
+                        <div class="text-center mt-8">
+                            <p class="text-2xl font-semibold text-gray-400">Cosmic Symbiote</p>
+                            <p class="text-6xl font-black text-[#B5179E]">PHOENIX</p>
+                            <p class="text-2xl font-bold text-gray-300">FORCE</p>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="dualityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-2 bg-gray-800 rounded-lg shadow-2xl p-6">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#4CC9F0]">A Life of Cycles: Key Events</h2>
+                <div class="timeline">
+                    <div class="timeline-container timeline-left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold text-[#F72585]">The Traumatic Spark</h3>
+                            <p class="text-sm text-gray-400">Age 10: Latent telepathy manifests violently upon witnessing the death of her best friend, an event that first alerts the Phoenix Force to her existence.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold text-[#F72585]">The Phoenix Saga</h3>
+                            <p class="text-sm text-gray-400">Dies piloting a shuttle through a solar flare. The Phoenix Force saves her, creating a duplicate and placing her real body in a healing cocoon.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold text-[#F72585]">The Dark Phoenix Saga</h3>
+                            <p class="text-sm text-gray-400">Corrupted by Mastermind, the Phoenix construct becomes Dark Phoenix, consumes a star, and commits genocide before sacrificing herself on the moon.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold text-[#F72585]">Resurrection & Retcon</h3>
+                            <p class="text-sm text-gray-400">The true Jean Grey is found alive in her cocoon, absolved of Dark Phoenix's crimes but causing the tragic downfall of her clone, Madelyne Pryor.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-container timeline-left">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold text-[#F72585]">Second Death & Ascension</h3>
+                            <p class="text-sm text-gray-400">Killed by a Magneto-impersonator, her consciousness ascends to the White Hot Room to begin healing the fractured Phoenix Force.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-container timeline-right">
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold text-[#F72585]">White Phoenix of the Crown</h3>
+                            <p class="text-sm text-gray-400">After multiple deaths in the Krakoan Age, she fully merges with the Phoenix, achieving her ultimate form to save all of reality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg shadow-2xl p-6">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#4CC9F0]">The Omega Mutant</h2>
+                <p class="text-center text-gray-400 mb-8">As an Omega-Level Mutant, Jean's inherent abilities in both telepathy and telekinesis have no definable upper limit. Her raw power is virtually unparalleled, matched by microscopic precision.</p>
+                <div class="chart-container">
+                    <canvas id="powerRadarChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg shadow-2xl p-6">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#4CC9F0]">The Human Factor: Weaknesses</h2>
+                 <p class="text-center text-gray-400 mb-8">Despite her god-like power, Jean's greatest vulnerabilities stem from her humanity. Her emotions, physical mortality, and the sheer burden of control are her most persistent challenges.</p>
+                <div class="chart-container">
+                    <canvas id="weaknessChart"></canvas>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-gray-800 rounded-lg shadow-2xl p-6">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#4CC9F0]">Cosmic Apotheosis: The Phoenix Force</h2>
+                <p class="text-center max-w-3xl mx-auto text-gray-400 mb-8">The Phoenix Force amplifies Jean's abilities to a multiversal scale. This chart visualizes the exponential growth from her baseline mutant state to her ultimate form as the White Phoenix of the Crown.</p>
+                <div class="chart-container h-[500px] max-h-[550px]">
+                    <canvas id="phoenixPowerLevels"></canvas>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-gray-800 rounded-lg shadow-2xl p-6">
+                <h2 class="text-3xl font-bold text-center mb-4 text-[#4CC9F0]">The Psychological Trinity</h2>
+                <p class="text-center max-w-3xl mx-auto text-gray-400 mb-8">Jean's character is defined by her relationships with three key men, each representing a fundamental force of her psyche: the Ego, the Id, and the Superego. Her life's journey is a struggle to integrate these conflicting forces.</p>
+                <div class="flex flex-col items-center space-y-6">
+                    <div class="bg-[#F72585] text-white p-4 rounded-lg shadow-lg text-center w-48">
+                        <h3 class="font-bold text-xl">Jean Grey</h3>
+                        <p class="text-sm">The Self</p>
+                    </div>
+                    <div class="w-px h-8 bg-gray-500"></div>
+                    <div class="flex flex-col md:flex-row md:space-x-16 space-y-6 md:space-y-0 text-center">
+                        <div class="flex flex-col items-center">
+                             <div class="w-px h-8 bg-gray-500 md:hidden"></div>
+                            <div class="bg-[#4361EE] text-white p-4 rounded-lg shadow-lg w-48">
+                                <h3 class="font-bold text-lg">Scott Summers</h3>
+                                <p class="text-xs">(Cyclops)</p>
+                                <hr class="my-2 border-blue-200">
+                                <p class="font-semibold">The Ego</p>
+                                <p class="text-xs">Represents order, control, and her anchor to humanity.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-px h-8 bg-gray-500 md:hidden"></div>
+                            <div class="bg-[#B5179E] text-white p-4 rounded-lg shadow-lg w-48">
+                                <h3 class="font-bold text-lg">Logan</h3>
+                                <p class="text-xs">(Wolverine)</p>
+                                <hr class="my-2 border-pink-200">
+                                <p class="font-semibold">The Id</p>
+                                <p class="text-xs">Represents passion, instinct, and untamed emotion.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                             <div class="w-px h-8 bg-gray-500 md:hidden"></div>
+                            <div class="bg-[#7209B7] text-white p-4 rounded-lg shadow-lg w-48">
+                                <h3 class="font-bold text-lg">Charles Xavier</h3>
+                                <p class="text-xs">(Professor X)</p>
+                                <hr class="my-2 border-purple-200">
+                                <p class="font-semibold">The Superego</p>
+                                <p class="text-xs">Represents flawed authority, morality, and external control.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>Infographic created based on a comprehensive analysis of Jean Grey's canonical history in Marvel Comics.</p>
+            <p>Visualizations generated using Chart.js and Tailwind CSS. No SVG or Mermaid JS used.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const FONT_COLOR = '#E5E7EB';
+        const GRID_COLOR = '#4B5563';
+        const PALETTE = {
+            pink: '#F72585',
+            magenta: '#B5179E',
+            purple: '#7209B7',
+            indigo: '#560BAD',
+            blue: '#4361EE',
+            lightBlue: '#4895EF',
+            cyan: '#4CC9F0'
+        };
+
+        const processLabels = (labels) => {
+            const maxLen = 16;
+            return labels.map(label => {
+                if (label.length <= maxLen) return label;
+                const words = label.split(' ');
+                let currentLine = '';
+                const res = [];
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).length > maxLen) {
+                        res.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine += (currentLine.length === 0 ? '' : ' ') + word;
+                    }
+                }
+                res.push(currentLine);
+                return res;
+            });
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+
+        const defaultPlugins = {
+            legend: {
+                labels: {
+                    color: FONT_COLOR,
+                    font: {
+                        size: 14
+                    }
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    title: tooltipTitleCallback
+                }
+            }
+        };
+
+        const createDualityChart = () => {
+            const ctx = document.getElementById('dualityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Humanity & Inherent Power', 'The Phoenix Force'],
+                    datasets: [{
+                        label: 'Core Identity',
+                        data: [50, 50],
+                        backgroundColor: [PALETTE.blue, PALETTE.pink],
+                        borderColor: '#1F2937',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: defaultPlugins
+                }
+            });
+        };
+
+        const createPowerRadarChart = () => {
+            const ctx = document.getElementById('powerRadarChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Raw Power', 'Fine Control', 'Offensive Use', 'Defensive Use', 'Range'],
+                    datasets: [
+                        {
+                            label: 'Telekinesis',
+                            data: [95, 98, 90, 100, 85],
+                            backgroundColor: 'rgba(72, 149, 239, 0.2)',
+                            borderColor: PALETTE.lightBlue,
+                            pointBackgroundColor: PALETTE.lightBlue,
+                        },
+                        {
+                            label: 'Telepathy',
+                            data: [100, 95, 98, 95, 100],
+                            backgroundColor: 'rgba(247, 37, 133, 0.2)',
+                            borderColor: PALETTE.pink,
+                            pointBackgroundColor: PALETTE.pink,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: defaultPlugins,
+                    scales: {
+                        r: {
+                            angleLines: { color: GRID_COLOR },
+                            grid: { color: GRID_COLOR },
+                            pointLabels: { color: FONT_COLOR, font: { size: 12 } },
+                            ticks: {
+                                color: FONT_COLOR,
+                                backdropColor: 'rgba(0,0,0,0)',
+                                stepSize: 20
+                            }
+                        }
+                    }
+                }
+            });
+        };
+
+        const createWeaknessChart = () => {
+            const ctx = document.getElementById('weaknessChart').getContext('2d');
+            const labels = ['Emotional Vulnerability', 'Burden of Control', 'Physical Mortality', 'Power Limitations'];
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: processLabels(labels),
+                    datasets: [{
+                        label: 'Impact Level',
+                        data: [95, 90, 75, 60],
+                        backgroundColor: [PALETTE.magenta, PALETTE.purple, PALETTE.indigo, PALETTE.blue],
+                        borderColor: '#1F2937',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...defaultPlugins,
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: GRID_COLOR },
+                            ticks: { color: FONT_COLOR }
+                        },
+                        y: {
+                            grid: { color: 'transparent' },
+                            ticks: { color: FONT_COLOR, font: { size: 14 } }
+                        }
+                    }
+                }
+            });
+        };
+
+        const createPhoenixPowerLevelsChart = () => {
+            const ctx = document.getElementById('phoenixPowerLevels').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Omega Mutant', 'Phoenix Host', ['White Phoenix', 'of the Crown']],
+                    datasets: [
+                        {
+                            label: 'Psionic Power',
+                            data: [100, 5000, 100000],
+                            backgroundColor: PALETTE.pink,
+                        },
+                        {
+                            label: 'Matter Manipulation',
+                            data: [80, 4500, 100000],
+                            backgroundColor: PALETTE.magenta,
+                        },
+                        {
+                            label: 'Cosmic Awareness',
+                            data: [10, 4000, 100000],
+                            backgroundColor: PALETTE.purple,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: defaultPlugins,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: { color: 'transparent' },
+                            ticks: { color: FONT_COLOR, font: { size: 14 } }
+                        },
+                        y: {
+                            stacked: true,
+                            type: 'logarithmic',
+                            grid: { color: GRID_COLOR },
+                            ticks: {
+                                color: FONT_COLOR,
+                                callback: function(value, index, values) {
+                                    if (value === 100000) return 'Infinite';
+                                    if (value === 10000) return 'Cosmic';
+                                    if (value === 1000) return 'Planetary';
+                                    if (value === 100) return 'Global';
+                                    return null;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        };
+
+        window.onload = () => {
+            createDualityChart();
+            createPowerRadarChart();
+            createWeaknessChart();
+            createPhoenixPowerLevelsChart();
+        };
+    </script>
+</body>
+</html>
