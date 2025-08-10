@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Omni-King: An Infographic Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-node {
+            border: 2px solid #FFC300;
+            background-color: #162447;
+            color: #DAF7A6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            min-width: 120px;
+        }
+        .flowchart-line {
+            background-color: #FFC300;
+            position: absolute;
+            z-index: -1;
+        }
+        .arrow-down::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #FFC300;
+        }
+         .arrow-right::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -10px;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid #FFC300;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+            padding-left: 2rem;
+            border-left: 4px solid #FFC300;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -11px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #FF5733;
+            border: 3px solid #1a1a2e;
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-black text-[#FFC300] text-shadow tracking-tight">THE OMNI-KING</h1>
+            <p class="text-xl md:text-2xl text-[#DAF7A6] mt-2">A Visual Analysis of Absolute Power</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <div class="lg:col-span-2 bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">The Supreme Ruler</h2>
+                <p class="text-lg">Residing at the absolute zenith of the divine hierarchy, Zeno is the King of All. His authority is absolute, inspiring profound fear in even the most powerful Gods of Destruction. His title is a direct reflection of his station: the ultimate sovereign of all reality.</p>
+            </div>
+
+            <div class="bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">A Reign of Paradox</h2>
+                <p class="mb-4">Zeno's defining characteristic is the stark contradiction between his immense power and his childlike mind. This chart visualizes the vast gap between his capacity for destruction and his emotional and intellectual maturity, the core source of existential dread in the multiverse.</p>
+                <div class="chart-container">
+                    <canvas id="paradoxChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">The First Erasure</h2>
+                <p class="mb-4">In the distant past, the cosmos consisted of eighteen universes. In a fit of displeasure, Zeno permanently erased six of them, establishing a terrifying historical precedent for his power and reducing the multiverse to its current state of twelve.</p>
+                <div class="flex flex-wrap justify-center items-center gap-4 p-4">
+                    <span class="text-5xl" title="Universe 1">🪐</span>
+                    <span class="text-5xl" title="Universe 2">🪐</span>
+                    <span class="text-5xl" title="Universe 3">🪐</span>
+                    <span class="text-5xl" title="Universe 4">🪐</span>
+                    <span class="text-5xl" title="Universe 5">🪐</span>
+                    <span class="text-5xl" title="Universe 6">🪐</span>
+                    <span class="text-5xl" title="Universe 7">🪐</span>
+                    <span class="text-5xl" title="Universe 8">🪐</span>
+                    <span class="text-5xl" title="Universe 9">🪐</span>
+                    <span class="text-5xl" title="Universe 10">🪐</span>
+                    <span class="text-5xl" title="Universe 11">🪐</span>
+                    <span class="text-5xl" title="Universe 12">🪐</span>
+                    <span class="text-5xl text-red-500 opacity-50 relative" title="Erased"><div class="absolute inset-0 transform rotate-45 border-t-4 border-red-500"></div><div class="absolute inset-0 transform -rotate-45 border-t-4 border-red-500"></div>🪐</span>
+                    <span class="text-5xl text-red-500 opacity-50 relative" title="Erased"><div class="absolute inset-0 transform rotate-45 border-t-4 border-red-500"></div><div class="absolute inset-0 transform -rotate-45 border-t-4 border-red-500"></div>🪐</span>
+                    <span class="text-5xl text-red-500 opacity-50 relative" title="Erased"><div class="absolute inset-0 transform rotate-45 border-t-4 border-red-500"></div><div class="absolute inset-0 transform -rotate-45 border-t-4 border-red-500"></div>🪐</span>
+                    <span class="text-5xl text-red-500 opacity-50 relative" title="Erased"><div class="absolute inset-0 transform rotate-45 border-t-4 border-red-500"></div><div class="absolute inset-0 transform -rotate-45 border-t-4 border-red-500"></div>🪐</span>
+                    <span class="text-5xl text-red-500 opacity-50 relative" title="Erased"><div class="absolute inset-0 transform rotate-45 border-t-4 border-red-500"></div><div class="absolute inset-0 transform -rotate-45 border-t-4 border-red-500"></div>🪐</span>
+                    <span class="text-5xl text-red-500 opacity-50 relative" title="Erased"><div class="absolute inset-0 transform rotate-45 border-t-4 border-red-500"></div><div class="absolute inset-0 transform -rotate-45 border-t-4 border-red-500"></div>🪐</span>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-2 bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">Anatomy of Absolute Power</h2>
+                 <p class="mb-4">Zeno's power is ontological, not physical. He redefines reality at will. This profile shows the profound asymmetry of his capabilities: his power to Erase and his Invincibility are absolute, while his creative abilities and physical attributes are demonstrably limited.</p>
+                <div class="chart-container mx-auto">
+                    <canvas id="powerRadarChart"></canvas>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">A Visual Timeline of the Emperor Calendar</h2>
+                <p class="mb-8 text-center">Zeno's reign is ancient, but it does not stretch back to the beginning of time. This timeline highlights key events, revealing a history far more complex than a simple, eternal rule and underscoring the chronological paradoxes of the divine realm.</p>
+                <div class="relative mt-4">
+                    <div class="timeline-item">
+                        <h3 class="font-bold text-lg text-[#FFC300]">~75 Million Years Ago</h3>
+                        <p>Elder Kai is sealed in the Z Sword by Beerus, an event that predates Zeno's known reign by over 66 million years, proving the divine hierarchy existed long before the "Emperor Calendar" began.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="font-bold text-lg text-[#FFC300]">~8.6 Million Years Ago</h3>
+                        <p>The "Emperor Calendar" begins, marking the start of Zeno's rule as the Omni-King. His method of ascension to this pre-existing throne remains unknown.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="font-bold text-lg text-[#FFC300]">Ancient Past (Date Unknown)</h3>
+                        <p>In a fit of displeasure, Zeno erases six of the original eighteen universes, establishing the terrifying precedent for his power and reducing the cosmos to its current state.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3 class="font-bold text-lg text-[#FFC300]">Age 796</h3>
+                        <p>Goku summons Future Zeno, who erases the corrupted future timeline. Goku then brings this second Zeno to the present, creating a co-rulership.</p>
+                    </div>
+                    <div class="timeline-item" style="border-left-color: transparent;">
+                        <h3 class="font-bold text-lg text-[#FFC300]">Age 797</h3>
+                        <p>The two Zenos preside over the Tournament of Power, a clandestine moral test that results in the restoration of all erased universes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">The Divine Hierarchy</h2>
+                <p class="mb-8 text-center">The cosmos is governed by a strict chain of command, with Zeno at the apex. This chart illustrates the flow of authority and the critical life-link between the forces of creation and destruction that underpins each universe's stability.</p>
+                <div class="flex flex-col items-center gap-8">
+                    <div class="flowchart-node">ZENO</div>
+                    <div class="w-px h-8 bg-[#FFC300]"></div>
+                    <div class="flowchart-node">GRAND PRIEST</div>
+                    <div class="w-px h-8 bg-[#FFC300]"></div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <!-- Simplified representation for 12 universes -->
+                        <div v-for="i in 12" class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">Universe</div>
+                            <div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div>
+                            <div class="w-px h-4 bg-[#FFC300]"></div>
+                            <div class="flex gap-2 justify-center w-full">
+                                <div class="flowchart-node !p-2 !min-w-0 text-xs w-1/2">Supreme Kai</div>
+                                <div class="text-lg text-[#FF5733] font-bold self-center">+</div>
+                                <div class="flowchart-node !p-2 !min-w-0 text-xs w-1/2">God of Destruction</div>
+                            </div>
+                        </div>
+                         <!-- Hardcoding 12 universes for non-JS solution -->
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U1</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U2</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U3</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U4</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U5</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U6</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U7</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U8</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                        <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U9</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                         <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U10</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                         <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U11</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                         <div class="flex flex-col items-center gap-2 p-2 border border-[#FFC300]/50 rounded-lg">
+                            <div class="text-sm font-bold text-[#FFC300]">U12</div><div class="flowchart-node !p-2 !min-w-0 w-full">Angel</div><div class="w-px h-4 bg-[#FFC300]"></div><div class="flex gap-1 justify-center w-full"><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">Kai</div><div class="text-lg text-[#FF5733] font-bold self-center">+</div><div class="flowchart-node !p-1 !min-w-0 text-xs w-1/2">GoD</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">Mortal Level Rankings</h2>
+                <p class="mb-4">The "Mortal Level" is a divine metric for the quality of life in a universe. The Tournament of Power was conceived because eight universes fell below the acceptable score of 7. This chart ranks the universes, highlighting those exempt from the tournament and those fighting for their existence.</p>
+                <div class="chart-container">
+                    <canvas id="mortalLevelChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">Weaknesses & Limitations</h2>
+                <p class="mb-4">Despite being invincible, Zeno is not without critical weaknesses. These are not combat vulnerabilities but fundamental limitations in his nature that constrain his understanding and actions, making him dependent on others.</p>
+                <ul class="list-disc list-inside space-y-2 text-lg">
+                    <li><span class="font-bold text-[#FFC300]">Cognitive Immaturity:</span> Possesses the intellect and emotional control of a child.</li>
+                    <li><span class="font-bold text-[#FFC300]">Perceptual Limits:</span> Cannot track high-speed combat with his own senses.</li>
+                    <li><span class="font-bold text-[#FFC300]">Lack of Omniscience:</span> Unaware of events unless they are brought to his attention.</li>
+                     <li><span class="font-bold text-[#FFC300]">Asymmetric Power:</span> Creation abilities are vastly inferior to his destructive power.</li>
+                    <li><span class="font-bold text-[#FFC300]">Subject to Timelines:</span> Bound by temporal laws; a new Zeno is created with each new timeline.</li>
+                </ul>
+            </div>
+
+            <div class="lg:col-span-2 bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">The Tournament of Power</h2>
+                <p class="mb-4">Presented as a cruel act of downsizing, the tournament was a clandestine moral test. Zeno gambled the fate of existence on the hope that the victor would be virtuous enough to make a selfless wish, proving the value of mortal life.</p>
+                <div class="chart-container">
+                    <canvas id="tournamentChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-2 bg-[#162447]/80 rounded-lg shadow-2xl p-6 backdrop-blur-sm">
+                <h2 class="text-3xl font-bold text-[#FF5733] mb-4">The Great Unanswered Questions</h2>
+                <p class="mb-4">Despite his central role, Zeno remains the greatest enigma in the cosmos. His history and the full extent of his nature are shrouded in mystery, leaving several profound questions that challenge our understanding of the Dragon Ball world.</p>
+                <ul class="space-y-4 text-lg">
+                    <li class="flex items-start gap-4"><span class="text-2xl text-[#FFC300]">❓</span><div><span class="font-bold">The Predecessor:</span> Who, or what, was the Omni-King before Zeno's ~8.6 million year reign began?</div></li>
+                    <li class="flex items-start gap-4"><span class="text-2xl text-[#FFC300]">❓</span><div><span class="font-bold">The Lost Six:</span> What were the six erased universes like? What could they have done to warrant such a fate?</div></li>
+                    <li class="flex items-start gap-4"><span class="text-2xl text-[#FFC300]">❓</span><div><span class="font-bold">The Dragon God:</span> What is Zeno's relationship to Zalama, the creator of the Super Dragon Balls, whose power can seemingly reverse Zeno's own acts of erasure?</div></li>
+                    <li class="flex items-start gap-4"><span class="text-2xl text-[#FFC300]">❓</span><div><span class="font-bold">The Ultimate Gambit:</span> Could Zeno's childlike persona be manipulated by a sufficiently cunning and patient being, like Frieza, representing the ultimate existential threat?</div></li>
+                </ul>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const FONT_COLOR = '#DAF7A6';
+        const GRID_COLOR = 'rgba(218, 247, 166, 0.2)';
+        const PALETTE = {
+            orange: '#FF5733',
+            yellow: '#FFC300',
+            green: '#DAF7A6',
+            red: '#C70039',
+            magenta: '#900C3F',
+            purple: '#581845'
+        };
+
+        function wrapLabel(label) {
+            const maxLineLength = 16;
+            if (label.length <= maxLineLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLineLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const sharedChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: FONT_COLOR,
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: FONT_COLOR, beginAtZero: true },
+                    grid: { color: GRID_COLOR }
+                },
+                x: {
+                    ticks: { color: FONT_COLOR },
+                    grid: { color: GRID_COLOR }
+                }
+            }
+        };
+
+        new Chart(document.getElementById('paradoxChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Absolute Power', 'Emotional Maturity'],
+                datasets: [{
+                    label: 'Attribute Level',
+                    data: [100, 5],
+                    backgroundColor: [PALETTE.red, PALETTE.yellow],
+                    borderColor: [PALETTE.red, PALETTE.yellow],
+                    borderWidth: 1
+                }]
+            },
+            options: { ...sharedChartOptions, indexAxis: 'y', plugins: { ...sharedChartOptions.plugins, legend: { display: false } } }
+        });
+
+        new Chart(document.getElementById('powerRadarChart'), {
+            type: 'radar',
+            data: {
+                labels: [
+                    wrapLabel('Conceptual Erasure'), 
+                    'Invincibility', 
+                    wrapLabel('Combat Prowess'), 
+                    wrapLabel('Creative Power'), 
+                    'Perception', 
+                    'Intellect'
+                ],
+                datasets: [{
+                    label: 'Zeno Power Profile',
+                    data: [100, 100, 1, 10, 5, 5],
+                    fill: true,
+                    backgroundColor: 'rgba(255, 87, 51, 0.4)',
+                    borderColor: PALETTE.orange,
+                    pointBackgroundColor: PALETTE.orange,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: PALETTE.orange
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: GRID_COLOR },
+                        grid: { color: GRID_COLOR },
+                        pointLabels: { 
+                            color: FONT_COLOR,
+                            font: { size: 12 }
+                        },
+                        ticks: {
+                            color: FONT_COLOR,
+                            backdropColor: 'transparent',
+                            stepSize: 20
+                        }
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('mortalLevelChart'), {
+            type: 'bar',
+            data: {
+                labels: ['U1', 'U12', 'U5', 'U8', 'U11', 'U2', 'U6', 'U3', 'U10', 'U4', 'U7', 'U9'],
+                datasets: [{
+                    label: 'Mortal Level Score (Higher is better)',
+                    data: [9.1, 8.8, 8.5, 8.2, 5.0, 4.9, 4.5, 4.3, 3.9, 3.5, 3.1, 1.8],
+                    backgroundColor: [
+                        PALETTE.green, PALETTE.green, PALETTE.green, PALETTE.green, // Exempt
+                        PALETTE.yellow, PALETTE.yellow, PALETTE.yellow, PALETTE.yellow, // At risk
+                        PALETTE.orange, PALETTE.orange, PALETTE.orange, PALETTE.red // Lowest
+                    ],
+                    borderColor: '#162447',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...sharedChartOptions,
+                plugins: {
+                    ...sharedChartOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        title: { display: true, text: 'Mortal Level Score', color: FONT_COLOR },
+                        ticks: { color: FONT_COLOR },
+                        grid: { color: GRID_COLOR }
+                    },
+                    x: {
+                        title: { display: true, text: 'Universe', color: FONT_COLOR },
+                        ticks: { color: FONT_COLOR },
+                        grid: { color: 'transparent' }
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('tournamentChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Universes Spared (Initially)', 'Universes Erased', 'Universes Exempt', 'Universes Restored by Wish'],
+                datasets: [{
+                    label: 'Fate of Universes',
+                    data: [1, 7, 4, 7],
+                    backgroundColor: [PALETTE.yellow, PALETTE.red, 'rgba(218, 247, 166, 0.5)', PALETTE.green],
+                    borderColor: '#162447',
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: FONT_COLOR,
+                            font: { size: 12 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
