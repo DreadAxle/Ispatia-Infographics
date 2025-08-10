@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Anatomy of Eternity: An Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .hierarchy-level {
+            position: relative;
+            padding: 1rem;
+            border-left: 2px solid #38BDF8;
+            margin-left: 1rem;
+        }
+        .hierarchy-level::before {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.75rem;
+            height: 0.75rem;
+            border-radius: 9999px;
+            background-color: #A78BFA;
+            border: 2px solid #38BDF8;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-violet-400 mb-2">The Anatomy of Eternity</h1>
+            <p class="text-lg text-slate-400">A Visual Guide to the Embodiment of the Marvel Multiverse</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <section class="lg:col-span-2 bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">Who is Eternity?</h2>
+                <p class="text-slate-300 mb-6">Eternity is not a god or a being that lives within the universe; it <span class="font-bold text-violet-400">is</span> the universe. As a nigh-omnipotent abstract entity, it represents the sum total of all life, time, and existence within a given iteration of the Marvel Multiverse. Its history is the history of creation itself, a cyclical story of death and rebirth across cosmic ages. It is currently the personification of the 8th Cosmos.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-slate-900 p-6 rounded-xl">
+                        <p class="text-6xl font-black text-sky-400">8th</p>
+                        <p class="text-slate-400 mt-2">Current Cosmic Iteration</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl">
+                        <p class="text-6xl font-black text-violet-400">4</p>
+                        <p class="text-slate-400 mt-2">Pillars of Reality</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl">
+                        <p class="text-6xl font-black text-pink-400">1</p>
+                        <p class="text-slate-400 mt-2">Multiversal Whole</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">Cosmic Power Profile</h2>
+                <p class="text-slate-300 mb-6">Eternity's abilities are emergent properties of its nature as reality itself. While nearly absolute, its power is not without specific, conceptual limitations, particularly when acting through its finite universal avatars (M-Bodies).</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="powersChart"></canvas>
+                </div>
+            </section>
+
+            <section class="bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">Major Existential Threats</h2>
+                 <p class="text-slate-300 mb-6">Eternity's defeats serve as a narrative barometer for the greatest threats in the cosmos. These conflicts challenge the very principles of existence and are often perpetrated by beings wielding external or reality-defining power.</p>
+                <div class="chart-container h-80 md:h-96">
+                    <canvas id="threatsChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="lg:col-span-2 bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">The Cosmic Hierarchy</h2>
+                <p class="text-slate-300 mb-6">Eternity, while immensely powerful, is not the supreme authority. It exists within a well-defined cosmic power structure, subordinate to the ultimate forces of law and creation while holding dominion over the conceptual fabric of reality.</p>
+                <div class="space-y-4">
+                    <div class="hierarchy-level">
+                        <h3 class="font-bold text-violet-300 text-lg">The One-Above-All</h3>
+                        <p class="text-sm text-slate-400">The supreme creator of the Omniverse. Its power is absolute and unquestionable.</p>
+                    </div>
+                    <div class="hierarchy-level">
+                        <h3 class="font-bold text-violet-400 text-lg">The Living Tribunal</h3>
+                        <p class="text-sm text-slate-400">The ultimate arbiter of cosmic law, maintaining balance across the multiverse. Eternity must defer to its judgment.</p>
+                    </div>
+                    <div class="hierarchy-level">
+                        <h3 class="font-bold text-sky-400 text-lg">Eternity & The Cosmic Abstracts</h3>
+                        <p class="text-sm text-slate-400">Includes Eternity, Infinity, Death, and Oblivion. They are the embodiments of the fundamental principles of existence.</p>
+                    </div>
+                    <div class="hierarchy-level">
+                        <h3 class="font-bold text-blue-400 text-lg">Galactus & The Celestials</h3>
+                        <p class="text-sm text-slate-400">Fundamental forces of nature and cosmic architects who operate within the framework established by the abstracts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-2 bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">Forms of Manifestation</h2>
+                <p class="text-slate-300 mb-6">The distinction between Eternity's true form and its avatars is crucial. Its defeats are almost always inflicted upon its finite projections, not its true, multiversal self.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-900 p-6 rounded-xl border-l-4 border-violet-400">
+                        <h3 class="text-xl font-bold text-violet-400">Multi-Eternity (True Form)</h3>
+                        <p class="text-slate-300 mt-2">The sum total of all realities. This is the true, nigh-invulnerable entity that embodies the entire multiverse. It rarely interacts directly with lower planes of existence.</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl border-l-4 border-sky-400">
+                        <h3 class="text-xl font-bold text-sky-400">M-Body (Universal Avatar)</h3>
+                        <p class="text-slate-300 mt-2">A finite, universal-level projection used to interact with beings. This is the form most often seen and challenged by heroes and villains. Its power is limited to the universe it inhabits.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-2 bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">The Children of Eternity</h2>
+                <p class="text-slate-300 mb-6">Eternity is a generative force, capable of spawning new abstract entities that personify specific concepts within its being. These "children" are not biological but are extensions of reality's conceptual landscape.</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
+                    <div class="p-4 bg-slate-900 rounded-lg">
+                        <h4 class="font-bold text-pink-400">Eon</h4>
+                        <p class="text-xs text-slate-400">Time/Protection</p>
+                    </div>
+                    <div class="p-4 bg-slate-900 rounded-lg">
+                        <h4 class="font-bold text-pink-400">Entropy</h4>
+                        <p class="text-xs text-slate-400">Destruction</p>
+                    </div>
+                    <div class="p-4 bg-slate-900 rounded-lg">
+                        <h4 class="font-bold text-pink-400">Empathy</h4>
+                        <p class="text-xs text-slate-400">Emotion</p>
+                    </div>
+                    <div class="p-4 bg-slate-900 rounded-lg">
+                        <h4 class="font-bold text-pink-400">Epoch</h4>
+                        <p class="text-xs text-slate-400">Successor to Eon</p>
+                    </div>
+                     <div class="p-4 bg-slate-900 rounded-lg">
+                        <h4 class="font-bold text-pink-400">Eulogy</h4>
+                        <p class="text-xs text-slate-400">Endings</p>
+                    </div>
+                     <div class="p-4 bg-slate-900 rounded-lg">
+                        <h4 class="font-bold text-pink-400">Expediency</h4>
+                        <p class="text-xs text-slate-400">Plot Devices</p>
+                    </div>
+                     <div class="p-4 bg-slate-900 rounded-lg">
+                        <h4 class="font-bold text-pink-400">Love</h4>
+                        <p class="text-xs text-slate-400">Cosmic Power</p>
+                    </div>
+                     <div class="p-4 bg-slate-900 rounded-lg">
+                        <h4 class="font-bold text-pink-400">Gravitation</h4>
+                        <p class="text-xs text-slate-400">Fundamental Force</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:col-span-2 bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">The Four Pillars of Reality</h2>
+                <p class="text-slate-300 mb-6">Eternity does not exist alone. It is one of four cornerstone entities that define the fundamental parameters of the universe. Their relationships are not personal but conceptual, representing the symbiotic and antithetical forces that structure all of existence.</p>
+                <div class="relative flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-8 p-4">
+                    <div class="text-center w-40">
+                        <div class="p-4 bg-slate-900 border-2 border-sky-400 rounded-lg shadow-lg">
+                            <h3 class="text-lg font-bold text-sky-400">Eternity</h3>
+                            <p class="text-xs text-slate-400">Time & Reality</p>
+                        </div>
+                    </div>
+                    <div class="text-center w-40">
+                        <div class="p-4 bg-slate-900 border-2 border-violet-400 rounded-lg shadow-lg">
+                            <h3 class="text-lg font-bold text-violet-400">Infinity</h3>
+                            <p class="text-xs text-slate-400">Space</p>
+                        </div>
+                    </div>
+                    <div class="text-center w-40">
+                        <div class="p-4 bg-slate-900 border-2 border-pink-400 rounded-lg shadow-lg">
+                            <h3 class="text-lg font-bold text-pink-400">Death</h3>
+                            <p class="text-xs text-slate-400">The End</p>
+                        </div>
+                    </div>
+                    <div class="text-center w-40">
+                        <div class="p-4 bg-slate-900 border-2 border-red-400 rounded-lg shadow-lg">
+                            <h3 class="text-lg font-bold text-red-400">Oblivion</h3>
+                            <p class="text-xs text-slate-400">Non-Existence</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <section class="lg:col-span-2 bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4">The Cycle of Creation</h2>
+                <p class="text-slate-300 mb-6">Eternity is the current, but not the first, embodiment of reality. The multiverse evolves through cycles, with each "Cosmos" ending to give birth to a new one with different fundamental principles. This process was initiated by a rebellion against the static perfection of the First Firmament.</p>
+                <div class="relative pl-8 border-l-2 border-sky-400/30 space-y-12">
+                    <div class="absolute w-3 h-3 bg-sky-400 rounded-full -left-[7px] top-2 ring-4 ring-slate-800"></div>
+                    <div>
+                        <h3 class="font-bold text-violet-400">1st Cosmos: The First Firmament</h3>
+                        <p class="text-sm text-slate-300">A single, static universe. Its creator nature led to a civil war with its creations, the Celestials, shattering it and birthing the multiverse.</p>
+                    </div>
+                    <div class="absolute w-3 h-3 bg-sky-400 rounded-full -left-[7px] top-1/4 ring-4 ring-slate-800"></div>
+                    <div>
+                        <h3 class="font-bold text-violet-400">2nd - 6th Cosmos: The Age of Evolution</h3>
+                        <p class="text-sm text-slate-300">A series of multiverses that introduced foundational concepts: infinite possibility (2nd), duality (3rd), archetypes (4th), magic (5th), and science (6th).</p>
+                    </div>
+                    <div class="absolute w-3 h-3 bg-sky-400 rounded-full -left-[7px] top-2/4 ring-4 ring-slate-800"></div>
+                    <div>
+                        <h3 class="font-bold text-violet-400">7th Cosmos: The First Eternity</h3>
+                        <p class="text-sm text-slate-300">The reality most are familiar with, born from the ashes of the 6th. This universe was ultimately destroyed by the extra-dimensional Beyonders.</p>
+                    </div>
+                    <div class="absolute w-3 h-3 bg-sky-400 rounded-full -left-[7px] top-3/4 ring-4 ring-slate-800"></div>
+                    <div>
+                        <h3 class="font-bold text-violet-400">8th Cosmos: The Current Eternity</h3>
+                        <p class="text-sm text-slate-300">Painstakingly restored after the Beyonders' destruction. This is the current state of the Marvel Multiverse, weakened at its rebirth but now fully established.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="lg:col-span-2 bg-slate-800/50 rounded-2xl shadow-2xl p-6 md:p-8 ring-1 ring-slate-700">
+                <h2 class="text-2xl font-bold text-red-400 mb-4">The Paradox of Power: Weaknesses & Limitations</h2>
+                <p class="text-slate-300 mb-6">For a being of near-infinite power, Eternity is paradoxically defined by its limits. These vulnerabilities are not flaws, but fundamental rules that provide stakes for cosmic stories and reinforce the intricate balance of the universe.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-900 p-6 rounded-xl border-l-4 border-red-400">
+                        <h3 class="font-bold text-red-400">The Avatar's Burden</h3>
+                        <p class="text-slate-300 mt-2">Eternity's defeats are almost always inflicted upon its finite "M-Body" avatars. These universal projections possess only a fraction of its true power, allowing for narratively significant threats without destroying the entire multiverse.</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl border-l-4 border-red-400">
+                        <h3 class="font-bold text-red-400">Conceptual Chains</h3>
+                        <p class="text-slate-300 mt-2">It is bound by cosmic law and must defer to the Living Tribunal. It also cannot fight its direct opposite (the void/Chaos King), as to do so would be to fight an aspect of its own definition.</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl border-l-4 border-red-400">
+                        <h3 class="font-bold text-red-400">Overwhelming Force</h3>
+                        <p class="text-slate-300 mt-2">Forces that operate on a universal scale (like the Infinity Gauntlet) or originate from outside its reality (like the Beyonders) can overwhelm and even destroy its M-Bodies and true self.</p>
+                    </div>
+                    <div class="bg-slate-900 p-6 rounded-xl border-l-4 border-red-400">
+                        <h3 class="font-bold text-red-400">Internal Conflicts</h3>
+                        <p class="text-slate-300 mt-2">Threats can arise from within. Its own creator (First Firmament) has imprisoned it, and its "son" (Entropy) once destroyed it. Its own fragmentation can also cause reality to destabilize.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 text-slate-500 text-sm">
+            <p>Data synthesized from Marvel Comics canon. This is a fan-made informational graphic.</p>
+            <p>Visualizations created with Chart.js and Tailwind CSS. No SVG or Mermaid JS were used in this document.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (str, maxWidth) => {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const tooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            return Array.isArray(label) ? label.join(' ') : label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const colorPalette = {
+            sky: '#38BDF8',
+            blue: '#60A5FA',
+            violet: '#A78BFA',
+            pink: '#F472B6',
+            red: '#F87171',
+            slate: 'rgba(100, 116, 139, 0.5)',
+            text: '#F1F5F9'
+        };
+
+        const createPowersChart = () => {
+            const ctx = document.getElementById('powersChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Reality Warping', 'Omniscience', 'Time/Space Control', 'Magic Authority', 'Physical Invulnerability'],
+                    datasets: [{
+                        label: 'Power Level',
+                        data: [10, 9, 10, 8, 7],
+                        backgroundColor: 'rgba(56, 189, 248, 0.2)',
+                        borderColor: colorPalette.sky,
+                        pointBackgroundColor: colorPalette.sky,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: colorPalette.sky
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...tooltipConfig,
+                    scales: {
+                        r: {
+                            angleLines: { color: colorPalette.slate },
+                            grid: { color: colorPalette.slate },
+                            pointLabels: { color: colorPalette.text, font: { size: 12 } },
+                            ticks: {
+                                backdropColor: 'rgba(30, 41, 59, 0.8)',
+                                color: colorPalette.text,
+                                stepSize: 2
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 10
+                        }
+                    },
+                    plugins: {
+                        ...tooltipConfig.plugins,
+                        legend: { display: false }
+                    }
+                }
+            });
+        };
+
+        const createThreatsChart = () => {
+            const ctx = document.getElementById('threatsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Dormammu',
+                        wrapLabel('Thanos (Infinity Gauntlet)', 16),
+                        'The Magus',
+                        'Chaos King',
+                        'The Beyonders',
+                        wrapLabel('First Firmament', 16)
+                    ],
+                    datasets: [{
+                        label: 'Threat Level',
+                        data: [70, 90, 85, 95, 100, 80],
+                        backgroundColor: [
+                            colorPalette.violet,
+                            colorPalette.red,
+                            colorPalette.violet,
+                            colorPalette.red,
+                            colorPalette.red,
+                            colorPalette.violet,
+                        ],
+                        borderColor: 'rgba(0,0,0,0)',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...tooltipConfig,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: colorPalette.slate },
+                            ticks: { color: colorPalette.text }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: colorPalette.text }
+                        }
+                    },
+                    plugins: {
+                        ...tooltipConfig.plugins,
+                        legend: { display: false }
+                    }
+                }
+            });
+        };
+
+        window.onload = () => {
+            createPowersChart();
+            createThreatsChart();
+        };
+    </script>
+</body>
+</html>
