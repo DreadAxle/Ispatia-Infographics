@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis: The Scarlet King</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0D0A0B;
+            color: #F4F4F9;
+        }
+        .card {
+            background-color: #2B4162;
+            border: 1px solid #D90429;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .pyramid-level {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+            padding: 2rem 3rem;
+            margin: -1px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .flow-line {
+            background-color: #D90429;
+            position: absolute;
+            z-index: 0;
+        }
+        .flow-box {
+            border: 2px solid #FF9B54;
+            background-color: #0D0A0B;
+            z-index: 10;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-black text-[#D90429] uppercase tracking-wider">The Scarlet King</h1>
+            <p class="text-xl md:text-2xl text-[#F4F4F9] mt-2">An Ontological Threat Analysis</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <section id="introduction" class="text-center p-6 rounded-lg card shadow-2xl">
+                <p class="text-lg md:text-xl max-w-4xl mx-auto mb-6">
+                    The entity designated the Scarlet King (Khahrahk) represents a metaphysical, multiversal threat of the highest order. He is not merely a physical being but a fundamental principle of tyrannical rage, a conceptual parasite that has retroactively inserted itself into the history of all creation. His objective is absolute: the dissolution of all existence to end the suffering he perceives as its inherent state.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-[#0D0A0B] p-6 rounded-lg">
+                        <p class="text-5xl font-bold text-[#D90429]">7</p>
+                        <p class="text-lg mt-2">Seals of the Brides</p>
+                    </div>
+                    <div class="bg-[#0D0A0B] p-6 rounded-lg">
+                        <p class="text-5xl font-bold text-[#D90429]">∞</p>
+                        <p class="text-lg mt-2">Realities Conquered</p>
+                    </div>
+                    <div class="bg-[#0D0A0B] p-6 rounded-lg">
+                        <p class="text-5xl font-bold text-[#D90429]">1</p>
+                        <p class="text-lg mt-2">Singular, Nihilistic Goal</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="genesis" class="card p-6 md:p-8 rounded-lg shadow-2xl">
+                <h2 class="text-3xl font-bold text-center mb-6 text-[#FF9B54]">The Genesis Paradox: A Synthesis of Being</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-base mb-4">The King's origin is a self-perpetuating causal loop, making him an acausal foe. He is both a primordial deity from before time and a modern idea born of societal tension. This is his greatest power: upon manifesting as a concept, he possessed the ability to rewrite the past, creating his own ancient mythology.</p>
+                        <p class="text-base">This dual nature means he is an eternal constant—an invasive narrative that underpins countless realities. He exists *because* of the modern world he seeks to destroy, and simultaneously, he has *always* existed. To fight him is to fight an idea that can change the history of the conflict while it is being fought.</p>
+                    </div>
+                    <div>
+                        <div class="chart-container">
+                            <canvas id="genesisChart"></canvas>
+                        </div>
+                        <p class="text-center mt-4 text-sm">The King's nature is a composite of multiple symbiotic origins, each contributing to his overall terrifying persona.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="power" class="card p-6 md:p-8 rounded-lg shadow-2xl">
+                <h2 class="text-4xl font-black text-center mb-8 text-[#FF9B54]">A Taxonomy of Power</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <p class="text-lg mb-6">The Scarlet King's power is a perfect hierarchy of tyranny. His abilities flow from the highest level of abstract, conceptual manipulation down to raw, universe-shattering physical force. This structure is mirrored in the oppressive, hierarchical societies he inspires, such as the Daevite Empire.</p>
+                        <ul class="space-y-4 text-base">
+                            <li><strong class="text-[#FF9B54]">Metaphysical:</strong> Retroactively alters history and narrative; exists beyond cause and effect.</li>
+                            <li><strong class="text-[#FF9B54]">Thaumaturgical:</strong> Master of blood magic; manipulates minds and memories across dimensions.</li>
+                            <li><strong class="text-[#FF9B54]">Physical:</strong> Manifests as continent-sized avatars capable of ending worlds.</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center justify-center p-4">
+                        <div class="w-full max-w-sm">
+                            <div class="pyramid-level bg-[#D90429] w-full">
+                                <h3 class="text-xl font-bold">Metaphysical Dominance</h3>
+                            </div>
+                            <div class="pyramid-level bg-[#a1031e] w-11/12 mx-auto">
+                                <h3 class="text-lg font-semibold">Thaumaturgical & Psychic Prowess</h3>
+                            </div>
+                            <div class="pyramid-level bg-[#6e0214] w-10/12 mx-auto">
+                                <h3 class="text-md font-medium">Physical Manifestation</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="court" class="card p-6 md:p-8 rounded-lg shadow-2xl">
+                <h2 class="text-4xl font-black text-center mb-8 text-[#FF9B54]">The Crimson Court</h2>
+                <p class="text-lg text-center max-w-3xl mx-auto mb-12">The King's will is enacted by a vast network of offspring, servants, and worshippers. This court is the instrument of his multiversal war, spreading his influence through conquest, corruption, and ritual.</p>
+                <div class="flex flex-col items-center space-y-4">
+                    <div class="flow-box p-4 rounded-lg text-center">
+                        <p class="text-2xl font-bold text-[#D90429]">The Scarlet King</p>
+                    </div>
+                    <div class="w-px h-8 bg-[#D90429]"></div>
+                    <div class="flow-box p-3 rounded-lg text-center">
+                        <p class="font-bold">The Seven Brides</p>
+                        <p class="text-sm">(Progenitors of Legions)</p>
+                    </div>
+                    <div class="w-px h-8 bg-[#D90429]"></div>
+                    <div class="w-full relative h-24">
+                        <div class="flow-line w-2/3 h-px top-0 left-1/2 transform -translate-x-1/2"></div>
+                        <div class="flow-line w-px h-8 top-0 left-1/2 transform -translate-x-1/2"></div>
+                        <div class="flow-line w-px h-full top-0 left-[16.66%]"></div>
+                        <div class="flow-line w-px h-full top-0 left-[83.33%]"></div>
+                    </div>
+                    <div class="w-full grid grid-cols-3 gap-4 text-center">
+                        <div class="flow-box p-2 rounded-lg w-full">
+                             <p class="font-semibold">SCP-682</p>
+                            <p class="text-xs">(The Leviathan)</p>
+                        </div>
+                        <div class="flow-box p-2 rounded-lg w-full">
+                             <p class="font-semibold">Daevite Empire</p>
+                            <p class="text-xs">(Ancient Worshippers)</p>
+                        </div>
+                        <div class="flow-box p-2 rounded-lg w-full">
+                            <p class="font-semibold">Children of the SK</p>
+                            <p class="text-xs">(Modern Cults)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="weakness" class="space-y-8">
+                <h2 class="text-4xl font-black text-center text-[#FF9B54]">The Prophesied Demise</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="card p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-center mb-4">Conceptual Antithesis</h3>
+                        <p class="text-base mb-4">The King's greatest weakness is the one he created: the rebellion of his seventh daughter, A'habbat, who birthed heroes instead of monsters. This culminates in SCP-999, a being of pure positivity. The King's power is derived from pain, rage, and despair. SCP-999 is a conceptual weapon that can "unmake" him by negating these fundamental principles with joy, love, and euphoria.</p>
+                        <div class="chart-container h-[300px] md:h-[350px]">
+                            <canvas id="antithesisChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-center mb-4">Failing Containment</h3>
+                        <p class="text-base mb-4">While the core entity is conceptual, its physical avatars can be bound. The most powerful known avatar, SCP-2317, is imprisoned by seven chains. Six have already broken. Its escape, which will trigger an XK-Class End-of-the-World Scenario, is considered inevitable by the O5 Council, projected to occur within 30 years.</p>
+                        <div class="chart-container h-[300px] md:h-[350px]">
+                            <canvas id="containmentChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const wrapLabel = (label, maxWidth) => {
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).length > maxWidth && currentLine.length > 0) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine = currentLine ? currentLine + ' ' + word : word;
+                    }
+                }
+                if (currentLine) lines.push(currentLine);
+                return lines;
+            };
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                return Array.isArray(label) ? label.join(' ') : label;
+            };
+
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#F4F4F9',
+                            font: { size: 14 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(244, 244, 249, 0.2)' },
+                        grid: { color: 'rgba(244, 244, 249, 0.2)' },
+                        pointLabels: { 
+                            color: '#F4F4F9',
+                            font: { size: 14 }
+                        },
+                        ticks: {
+                            color: '#F4F4F9',
+                            backdropColor: 'rgba(0,0,0,0.5)',
+                            font: { size: 10 }
+                        }
+                    },
+                    x: {
+                        grid: { color: 'rgba(244, 244, 249, 0.2)' },
+                        ticks: { 
+                            color: '#F4F4F9',
+                            font: { size: 12 }
+                        }
+                    },
+                    y: {
+                        grid: { color: 'rgba(244, 244, 249, 0.2)' },
+                        ticks: { 
+                            color: '#F4F4F9',
+                            font: { size: 12 }
+                        }
+                    }
+                }
+            };
+
+            const genesisCtx = document.getElementById('genesisChart').getContext('2d');
+            const genesisLabels = ['Primordial Deity', 'Conceptual Idea', 'Physical Avatar', 'Separated God'];
+            new Chart(genesisCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: genesisLabels,
+                    datasets: [{
+                        label: 'Origin Contribution',
+                        data: [30, 30, 20, 20],
+                        backgroundColor: ['#D90429', '#FF9B54', '#6e0214', '#a1031e'],
+                        borderColor: '#2B4162',
+                        borderWidth: 3
+                    }]
+                },
+                options: { ...chartOptions, scales: {} }
+            });
+
+            const antithesisCtx = document.getElementById('antithesisChart').getContext('2d');
+            new Chart(antithesisCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Tyranny', 'Rage', 'Despair', 'Violence', 'Hope', 'Love', 'Joy'],
+                    datasets: [
+                        {
+                            label: 'Scarlet King',
+                            data: [10, 9, 10, 9, 1, 0, 0],
+                            backgroundColor: 'rgba(217, 4, 41, 0.4)',
+                            borderColor: '#D90429',
+                            pointBackgroundColor: '#D90429',
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'SCP-999',
+                            data: [0, 0, 0, 0, 10, 10, 10],
+                            backgroundColor: 'rgba(255, 155, 84, 0.4)',
+                            borderColor: '#FF9B54',
+                            pointBackgroundColor: '#FF9B54',
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: chartOptions
+            });
+
+            const containmentCtx = document.getElementById('containmentChart').getContext('2d');
+            new Chart(containmentCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Ancient Past', '1900', '1980', '2024', '2040', '2054 (Projected)'],
+                    datasets: [{
+                        label: 'SCP-2317 Containment Integrity (%)',
+                        data: [100, 95, 71, 14, 5, 0],
+                        fill: true,
+                        backgroundColor: 'rgba(217, 4, 41, 0.4)',
+                        borderColor: '#D90429',
+                        tension: 0.1,
+                        pointRadius: 5,
+                        pointBackgroundColor: '#FF9B54'
+                    }]
+                },
+                options: {
+                    ...chartOptions,
+                    scales: {
+                        y: {
+                            ...chartOptions.scales.y,
+                            beginAtZero: true,
+                            max: 100
+                        },
+                        x: chartOptions.scales.x
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
