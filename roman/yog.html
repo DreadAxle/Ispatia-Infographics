@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: An Analysis of Yog-Sothoth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1B2A;
+            color: #E0E1DD;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 50vh;
+        }
+        .flow-node {
+            border: 2px solid #415A77;
+            background-color: #1B263B;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .flow-connector {
+            width: 2px;
+            background-color: #415A77;
+            margin: 0 auto;
+        }
+        .flow-horizontal-connector {
+            height: 2px;
+            background-color: #415A77;
+            flex-grow: 1;
+        }
+        .card {
+            background-color: #1B263B;
+            border: 1px solid #415A77;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-white uppercase">Yog-Sothoth</h1>
+            <p class="text-xl md:text-2xl text-[#778DA9] mt-2">An Ontological Analysis of the All-in-One</p>
+        </header>
+
+        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <section class="lg:col-span-3 card rounded-lg shadow-xl p-6 text-center">
+                <h2 class="text-2xl font-bold text-white mb-2">The Key and The Gate</h2>
+                <p class="text-lg text-[#E0E1DD] max-w-4xl mx-auto font-mono border-2 border-dashed border-[#415A77] p-4 rounded-md">"Yog-Sothoth knows the gate. Yog-Sothoth is the gate. Yog-Sothoth is the key and guardian of the gate. Past, present, future, all are one in Yog-Sothoth."</p>
+                <p class="mt-4 text-[#778DA9]">This core paradox defines the entity. It is not a being within the cosmos, but the very fabric of trans-dimensional existence itself—simultaneously the path, the lock, and the entity that traverses all.</p>
+            </section>
+            
+            <section class="md:col-span-1 lg:col-span-1 card rounded-lg shadow-xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-4 text-center">Cosmic Hierarchy</h2>
+                <p class="text-[#778DA9] mb-6 text-center">Yog-Sothoth represents the sapient, ordered structure of reality that emerges from the mindless, raw potential of Azathoth.</p>
+                <div class="flex flex-col items-center">
+                    <div class="flow-node">
+                        <h3 class="font-bold text-white">AZATHOTH</h3>
+                        <p class="text-sm text-[#778DA9]">The Blind Idiot God (Pure Chaos)</p>
+                    </div>
+                    <div class="flow-connector h-8"></div>
+                    <div class="flow-node">
+                        <h3 class="font-bold text-white">THE NAMELESS MISTS</h3>
+                        <p class="text-sm text-[#778DA9]">Primordial Emanation</p>
+                    </div>
+                    <div class="flow-connector h-8"></div>
+                    <div class="flow-node ring-2 ring-[#E0E1DD]">
+                        <h3 class="font-bold text-white">YOG-SOTHOTH</h3>
+                        <p class="text-sm text-[#778DA9]">The All-in-One (Sapient Order)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="md:col-span-2 lg:col-span-2 card rounded-lg shadow-xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-4 text-center">A Being of Many Faces</h2>
+                <p class="text-[#778DA9] mb-6 text-center">Its avatars are not disguises, but functional manifestations of its aspects, each embodying a different cosmic role.</p>
+                <div class="chart-container">
+                    <canvas id="avatarChart"></canvas>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 card rounded-lg shadow-xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-4 text-center">The Progenitor: A Cosmic Lineage</h2>
+                <p class="text-[#778DA9] mb-8 text-center">Through procreation, Yog-Sothoth projects its essence into otherwise inaccessible realities, creating living anchors of its power.</p>
+                <div class="flex flex-col items-center">
+                    <div class="flex items-center">
+                        <div class="flow-node">
+                            <h3 class="font-bold text-white">YOG-SOTHOTH</h3>
+                        </div>
+                        <div class="mx-4 text-4xl text-[#415A77]">&amp;</div>
+                        <div class="flow-node">
+                            <h3 class="font-bold text-white">SHUB-NIGGURATH</h3>
+                        </div>
+                    </div>
+                    <div class="flow-connector h-8"></div>
+                    <div class="flex justify-center w-full max-w-md">
+                        <div class="flow-horizontal-connector mt-4"></div>
+                    </div>
+                    <div class="flex w-full max-w-md">
+                        <div class="w-1/2 flex flex-col items-center">
+                             <div class="flow-connector h-8"></div>
+                             <div class="flow-node">
+                                <h3 class="font-bold text-white">NUG & YEB</h3>
+                             </div>
+                             <div class="flow-connector h-8"></div>
+                             <div class="flow-node">
+                                <h3 class="font-bold text-white">CTHULHU</h3>
+                             </div>
+                        </div>
+                        <div class="w-1/2 flex flex-col items-center">
+                             <div class="flow-connector h-8"></div>
+                             <div class="flow-node">
+                                <h3 class="font-bold text-white">HASTUR</h3>
+                             </div>
+                             <div class="flow-connector h-8"></div>
+                             <div class="flow-node">
+                                <h3 class="font-bold text-white">THE WHATELEY TWINS</h3>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="lg:col-span-3 card rounded-lg shadow-xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-4 text-center">Compendium of Power</h2>
+                <p class="text-[#778DA9] mb-6 text-center">The entity's abilities are not actions it performs, but intrinsic properties of its being. To invoke it is to align reality with one of its fundamental aspects.</p>
+                <div class="chart-container h-[400px] max-h-[60vh]">
+                    <canvas id="abilitiesChart"></canvas>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card rounded-lg shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Case File: The Dunwich Horror</h3>
+                    <p class="text-[#778DA9] mb-4">A study in <span class="text-[#E0E1DD] font-semibold">Biological Intrusion</span>. Yog-Sothoth was invoked by the Whateley family to sire hybrid offspring. The goal was to create a living key to "open the way" for the Old Ones. This demonstrates its role as a cosmic catalyst that can be bargained with, resulting in reality-defying horrors.</p>
+                </div>
+                <div class="card rounded-lg shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-white mb-2">Case File: Randolph Carter</h3>
+                    <p class="text-[#778DA9] mb-4">A study in <span class="text-[#E0E1DD] font-semibold">Metaphysical Dissolution</span>. Seeking ultimate knowledge, Carter was brought before the All-in-One. The price of omniscience was the horrifying realization that his individual self was an illusion, a mere facet of a Supreme Archetype—Yog-Sothoth itself.</p>
+                </div>
+            </section>
+
+            <section class="lg:col-span-3 card rounded-lg shadow-xl p-6">
+                <h2 class="text-2xl font-bold text-white mb-4 text-center">Exploiting the Seams: Known Vulnerabilities</h2>
+                <p class="text-[#778DA9] mb-6 text-center">The true entity is likely invulnerable. However, its manifestations and offspring, being bound partially to physical laws, can be opposed.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Against Manifestations:</h3>
+                        <ul class="list-disc list-inside text-[#E0E1DD] space-y-2">
+                            <li><span class="font-bold">Portal Disruption:</span> The primary weakness. Destroying the physical or magical gate through which it manifests will sever its connection.</li>
+                            <li><span class="font-bold">Ritual Interruption:</span> Halting the summoning incantation or eliminating the summoners prevents its arrival.</li>
+                            <li><span class="font-bold">Dimensional Anchoring:</span> Spells that forbid dimensional travel can weaken or banish a localized manifestation.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Against Offspring:</h3>
+                        <ul class="list-disc list-inside text-[#E0E1DD] space-y-2">
+                            <li><span class="font-bold">Physical Instability:</span> Hybrid bodies are often physically frail and unstable, requiring immense energy to persist in our reality (e.g., Wilbur Whateley).</li>
+                            <li><span class="font-bold">Ritual Banishment:</span> Specific incantations from forbidden tomes can obliterate its spawn.</li>
+                            <li><span class="font-bold">Innate Antipathy:</span> Terrestrial animals often react with extreme hostility to their unnatural presence.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="lg:col-span-3 card rounded-lg shadow-xl p-6 text-center">
+                <h2 class="text-2xl font-bold text-white mb-4">The Ultimate Paradox</h2>
+                <p class="text-[#778DA9] mb-6">Yog-Sothoth is the core of Lovecraft's philosophical horror. It is not a monster in the cosmos; in a terrifying sense, it <span class="italic">is</span> the cosmos—an entity defined by contradiction.</p>
+                 <div class="chart-container h-[300px] max-h-[40vh]">
+                    <canvas id="paradoxChart"></canvas>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const wrapLabel = (label, maxWidth = 16) => {
+                if (label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                }
+                if (currentLine) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+            
+            const colorPalette = {
+                spaceBlue: '#0D1B2A',
+                gunmetal: '#1B263B',
+                shadowBlue: '#415A77',
+                slateGray: '#778DA9',
+                platinum: '#E0E1DD'
+            };
+
+            const defaultChartOptions = {
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: colorPalette.platinum,
+                            font: { size: 14 }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: colorPalette.shadowBlue },
+                        grid: { color: colorPalette.shadowBlue },
+                        pointLabels: { 
+                            color: colorPalette.platinum,
+                            font: { size: 12 }
+                        },
+                        ticks: {
+                            color: colorPalette.platinum,
+                            backdropColor: colorPalette.gunmetal
+                        }
+                    },
+                    x: {
+                        grid: { color: colorPalette.shadowBlue },
+                        ticks: { 
+                            color: colorPalette.platinum,
+                            font: { size: 12 }
+                        }
+                    },
+                    y: {
+                        grid: { color: colorPalette.shadowBlue },
+                        ticks: { 
+                            color: colorPalette.platinum,
+                            font: { size: 12 }
+                        }
+                    }
+                }
+            };
+            
+            const avatarCtx = document.getElementById('avatarChart')?.getContext('2d');
+            if (avatarCtx) {
+                new Chart(avatarCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Malevolence', 'Directness', 'Guidance', 'Physicality', 'Abstractness'],
+                        datasets: [{
+                            label: "'Umr at-Tawil",
+                            data: [1, 7, 9, 5, 6],
+                            fill: true,
+                            backgroundColor: 'rgba(224, 225, 221, 0.2)',
+                            borderColor: colorPalette.platinum,
+                            pointBackgroundColor: colorPalette.platinum,
+                        }, {
+                            label: 'The Lurker',
+                            data: [8, 9, 1, 9, 2],
+                            fill: true,
+                            backgroundColor: 'rgba(119, 141, 169, 0.4)',
+                            borderColor: colorPalette.slateGray,
+                            pointBackgroundColor: colorPalette.slateGray,
+                        }]
+                    },
+                    options: defaultChartOptions
+                });
+            }
+
+            const abilitiesCtx = document.getElementById('abilitiesChart')?.getContext('2d');
+            if (abilitiesCtx) {
+                const rawLabels = [
+                    'Omniscience', 'Dimensional Transcendence', 'Reality Warping', 
+                    'Genetic Intrusion', 'Madness Inducement', 'Resurrection'
+                ];
+                const wrappedLabels = rawLabels.map(label => wrapLabel(label));
+                new Chart(abilitiesCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: wrappedLabels,
+                        datasets: [{
+                            label: 'Cosmic Scope / Threat Level',
+                            data: [10, 10, 9, 7, 8, 6],
+                            backgroundColor: [
+                                '#415A77', '#536f91', '#6584ab', '#778DA9', '#8a9bb8', '#9caec6'
+                            ],
+                            borderColor: colorPalette.platinum,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        ...defaultChartOptions,
+                        indexAxis: 'y',
+                        scales: {
+                             x: { ...defaultChartOptions.scales.x, suggestedMax: 10 },
+                             y: { ...defaultChartOptions.scales.y }
+                        }
+                    }
+                });
+            }
+            
+            const paradoxCtx = document.getElementById('paradoxChart')?.getContext('2d');
+            if(paradoxCtx) {
+                new Chart(paradoxCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Gate & Guardian', 'Knowledge & Madness', 'Physical & Metaphysical', 'Immanent & Transcendent'],
+                        datasets: [{
+                            label: 'Paradoxes',
+                            data: [25, 25, 25, 25],
+                            backgroundColor: [
+                                colorPalette.shadowBlue,
+                                colorPalette.slateGray,
+                                '#2a364d',
+                                '#5f748d'
+                            ],
+                            borderColor: colorPalette.gunmetal,
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        ...defaultChartOptions,
+                        scales: {} 
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
